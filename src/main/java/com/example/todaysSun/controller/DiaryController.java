@@ -105,9 +105,13 @@ public class DiaryController {
 
         for (Diary d : diaries) {
             int day = d.getDate().getDayOfMonth();
-            diaryMap.computeIfAbsent(day, k -> new ArrayList<>()).add(
-                    Map.of("id", d.getId(), "mood", d.getMood())
-            );
+
+            // 🚀 수정된 부분: Map.of() 대신 HashMap 사용 & mood null 체크 수정띠띠..
+            Map<String, Object> diaryInfo = new HashMap<>();
+            diaryInfo.put("id", d.getId());
+            diaryInfo.put("mood", d.getMood() != null ? d.getMood() : "😊"); // null이면 기본 이모지
+
+            diaryMap.computeIfAbsent(day, k -> new ArrayList<>()).add(diaryInfo);
         }
 
         List<Map<String, Object>> days = new ArrayList<>();
@@ -134,8 +138,6 @@ public class DiaryController {
 
         return "diaries/calendar";
     }
-
-
 
     // 날짜 기반 일기 조회
     @GetMapping("/diaries/{year}/{month}/{day}")

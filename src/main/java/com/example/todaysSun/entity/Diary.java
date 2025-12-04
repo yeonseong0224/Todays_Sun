@@ -27,7 +27,7 @@ public class Diary {
     private LocalDate date;
 
     @Lob
-    @Column(columnDefinition = "CLOB")
+    @Column(columnDefinition = "TEXT")
     private String content;
 
     private String mood;

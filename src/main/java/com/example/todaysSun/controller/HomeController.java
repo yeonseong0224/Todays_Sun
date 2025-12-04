@@ -2,7 +2,9 @@ package com.example.todaysSun.controller;
 
 import com.example.todaysSun.entity.Member;
 import com.example.todaysSun.repository.MemberRepository;
+import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.MessageSource;
@@ -47,7 +49,8 @@ public class HomeController {
     @GetMapping("/")
     public String homeLogin(@CookieValue(name = "memberId", required = false) Long memberId,
                             Model model,
-                            Locale locale) {
+                            Locale locale,
+                            HttpServletResponse response) {
 
         log.info("HomeController accessed with memberId: {}", memberId);
 
@@ -61,8 +64,14 @@ public class HomeController {
         // 로그인 ID로 사용자 찾기
         Optional<Member> optionalMember = memberRepository.findById(memberId);
         if (optionalMember.isEmpty()) {
-            log.warn("Member not found for id: {}, redirecting to home", memberId);
-            return "redirect:/";
+            log.warn("Member not found for id: {}, clearing cookie and showing home", memberId);
+            // 쿠키 삭제 - 무한 리디렉션 방지
+            Cookie cookie = new Cookie("memberId", null);
+            cookie.setMaxAge(0);
+            cookie.setPath("/");
+            response.addCookie(cookie);
+            setHomeAttributes(model, locale);
+            return "home";
         }
 
         Member loginMember = optionalMember.get();

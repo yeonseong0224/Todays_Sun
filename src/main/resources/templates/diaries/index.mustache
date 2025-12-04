@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>오늘해</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="title">
+        <span>☀️ 오늘해 ☀️</span>
+    </div>
+
+    <div class="diary-box">
+        {{#diaryList}}
+            <div class="diary-card">
+                <div class="diary-left">
+                    <span style="font-size: 20px;">{{mood}}</span>
+                    <a href="/diaries/view/{{id}}">{{title}}</a>  <!-- ✅ 이 부분 수정 -->
+                </div>
+
+                <div class="diary-meta">
+                    🗓 {{date}}<br>
+                    ✍️ {{memberName}}
+                </div>
+            </div>
+        {{/diaryList}}
+    </div>
+
+    <div class="button-group">
+        <a href="/diaries/new" class="btn btn-today">☀️ 오늘해쓰기</a>
+        <a href="/gather" class="btn btn-gather">📅 모아해</a>
+        <form action="/logout" method="post">
+            <button type="submit" class="btn btn-logout">🔓 로그아웃</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

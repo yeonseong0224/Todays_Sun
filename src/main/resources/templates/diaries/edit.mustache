@@ -1,0 +1,96 @@
+<link rel="stylesheet" href="/css/new.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picmo@5.8.5/dist/picmo.min.css">
+<script src="https://cdn.jsdelivr.net/npm/picmo@5.8.5/dist/umd/index.js"></script>
+
+<!-- 이모지 모달 -->
+<div id="emojiModal">
+    <button id="closeEmojiModal">✖️</button>
+    <div id="emojiPickerContainer"></div>
+</div>
+<div id="emojiOverlay"></div>
+
+<form id="diaryForm" method="post" action="/diaries/{{year}}/{{month}}/{{day}}/update">
+    <div class="form-wrapper">
+        <input type="hidden" name="id" value="{{diary.id}}">
+
+        <!-- Title -->
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" class="form-control" placeholder="오늘 어떤 하루를 보내셨나요?" value="{{diary.title}}" required>
+        </div>
+
+        <!-- Date -->
+        <div class="form-group">
+            <label for="dateInput">Date</label>
+            <input type="date" id="dateInput" name="date" class="form-control" value="{{diary.date}}" required>
+        </div>
+
+        <!-- Emoji -->
+        <div class="form-group emoji-group">
+            <div class="emoji-label-row">
+                <div class="left-label">이모지 선택</div>
+            </div>
+
+            <div class="emoji-input-row">
+                <input type="hidden" id="moodInput" name="mood" value="{{diary.mood}}">
+                <button class="btn btn-outline-secondary emoji-button" type="button" id="emojiTrigger">
+                    {{diary.mood}}
+                </button>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="form-group">
+            <label for="content">Content</label>
+            <textarea id="content" name="content" class="form-control" placeholder="오늘 있었던 일을 적어보세요 :)" required>{{diary.content}}</textarea>
+        </div>
+
+        <!-- Buttons -->
+        <div class="mt-4">
+            <button type="submit" class="btn btn-today">📥 저장해</button>
+            <a href="/diaries/{{year}}/{{month}}/{{day}}" class="btn btn-gather">🔙 목록으로</a>
+        </div>
+    </div>
+</form>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const trigger = document.getElementById('emojiTrigger');
+        const input = document.getElementById('moodInput');
+        const modal = document.getElementById('emojiModal');
+        const overlay = document.getElementById('emojiOverlay');
+        const closeBtn = document.getElementById('closeEmojiModal');
+        const pickerContainer = document.getElementById('emojiPickerContainer');
+
+        const picker = picmo.createPicker({
+            rootElement: pickerContainer,
+            theme: 'auto',
+            emojisPerRow: 9,
+            rows: 6,
+            defaultCategory: 'smileys'
+        });
+
+        picker.addEventListener('emoji:select', (selection) => {
+            input.value = selection.emoji;
+            trigger.textContent = selection.emoji;
+            closePicker();
+        });
+
+        function openPicker() {
+            modal.style.display = 'block';
+            overlay.style.display = 'block';
+        }
+
+        function closePicker() {
+            modal.style.display = 'none';
+            overlay.style.display = 'none';
+        }
+
+        trigger.addEventListener('click', openPicker);
+        closeBtn.addEventListener('click', closePicker);
+        overlay.addEventListener('click', closePicker);
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') closePicker();
+        });
+    });
+</script>

@@ -86,6 +86,8 @@ public class LoginController {
         request.getSession().setAttribute("loginUserName", loginMember.getName());
 
         Cookie idCookie = new Cookie("memberId", String.valueOf(loginMember.getId()));
+        idCookie.setPath("/");
+        idCookie.setMaxAge(60 * 60 * 24 * 7); // 7일간 유지
         response.addCookie(idCookie);
 
         return "redirect:/";
@@ -99,6 +101,7 @@ public class LoginController {
 
     private void expireCookie(HttpServletResponse response, String cookieName) {
         Cookie cookie = new Cookie(cookieName, null);
+        cookie.setPath("/");
         cookie.setMaxAge(0);
         response.addCookie(cookie);
     }

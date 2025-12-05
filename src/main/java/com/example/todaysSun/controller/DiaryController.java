@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 import jakarta.validation.Valid;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
 import java.util.*;
@@ -94,6 +95,7 @@ public class DiaryController {
     }
 
     // 월별 보기
+    @Transactional(readOnly = true)
     @GetMapping("/diaries/{year}/{month}")
     public String viewMonth(@PathVariable int year, @PathVariable int month, Model model) {
         log.info("viewMonth called: year={}, month={}", year, month);

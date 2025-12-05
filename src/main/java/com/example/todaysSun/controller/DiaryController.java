@@ -96,21 +96,22 @@ public class DiaryController {
     // 월별 보기
     @GetMapping("/diaries/{year}/{month}")
     public String viewMonth(@PathVariable int year, @PathVariable int month, Model model) {
+        log.info("viewMonth called: year={}, month={}", year, month);
+
         LocalDate start = LocalDate.of(year, month, 1);
         LocalDate end = start.withDayOfMonth(start.lengthOfMonth());
         List<Diary> diaries = diaryRepository.findByDateBetween(start, end);
+
+        log.info("Found {} diaries between {} and {}", diaries.size(), start, end);
 
         // 날짜별 일기들(id + mood)
         Map<Integer, List<Map<String, Object>>> diaryMap = new HashMap<>();
 
         for (Diary d : diaries) {
             int day = d.getDate().getDayOfMonth();
-
-            // 🚀 수정된 부분: Map.of() 대신 HashMap 사용 & mood null 체크 수정띠띠..
             Map<String, Object> diaryInfo = new HashMap<>();
             diaryInfo.put("id", d.getId());
-            diaryInfo.put("mood", d.getMood() != null ? d.getMood() : "😊"); // null이면 기본 이모지
-
+            diaryInfo.put("mood", d.getMood() != null ? d.getMood() : "😊");
             diaryMap.computeIfAbsent(day, k -> new ArrayList<>()).add(diaryInfo);
         }
 
@@ -139,6 +140,8 @@ public class DiaryController {
         return "diaries/calendar";
     }
 
+
+
     // 날짜 기반 일기 조회
     @GetMapping("/diaries/{year}/{month}/{day}")
     public String showByDate(@PathVariable int year,
@@ -146,8 +149,11 @@ public class DiaryController {
                              @PathVariable int day,
                              Model model,
                              HttpSession session) {
+        log.info("showByDate called: {}/{}/{}", year, month, day);
+
         LocalDate date = LocalDate.of(year, month, day);
         List<Diary> diaryList = diaryRepository.findAllByDate(date);
+        log.info("Found {} diaries for date {}", diaryList.size(), date);
 
         String loginId = (String) session.getAttribute("loginId");
 

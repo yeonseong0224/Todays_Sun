@@ -34,7 +34,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #6f42c1;
+    color: #2F2E52;
     margin-left: 10px;
 }
 
@@ -69,13 +69,13 @@ body {
 }
 
 .btn-edit {
-    background-color: #488E72;
+    background-color: #7E7CF2;
     color: white;
 }
 
 .btn-delete {
     background-color: #7786F2;
-    color: #6f42c1;
+    color: #7044bc;
 }
 
 .btn-back {
@@ -84,15 +84,15 @@ body {
 }
 
 .btn-edit:hover {
-    background-color: #6f42c1;
+    background-color: #5E5CC2;
 }
 
 .btn-delete:hover {
-    background-color: #f1c0c4;
+    background-color: #5E5CC2;
 }
 
 .btn-back:hover {
-    background-color: #ddcd84;
+    background-color: #E0E0E0;
 }
 .btn-today {
     background-color: #9997FF;
@@ -105,7 +105,7 @@ body {
 }
 
 .btn-today:hover {
-    background-color: #6f42c1;
+    background-color: #5E5CC2;
 }
 
 .btn-gather {
@@ -119,12 +119,12 @@ body {
 }
 
 .btn-gather:hover {
-    background-color: #7786F2;
+    background-color: #E0E0E0;
 }
 
 .btn-logout {
     background-color: #7786F2;
-    color: #6f42c1;
+    color: #331c72;
     border: none;
     padding: 10px 20px;
     font-weight: bold;
@@ -133,5 +133,5 @@ body {
 }
 
 .btn-logout:hover {
-    background-color: #9997FF;
+    background-color: #5E5CC2;
 }

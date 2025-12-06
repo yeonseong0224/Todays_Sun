@@ -19,8 +19,8 @@ label {
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 1.1rem;
     color: #333;
-    background-color: #fffaf0;
-    border: 2px solid #6ea951;
+    background-color: #FBFBFB;
+    border: 2px solid #9997FF;
     padding: 10px;
     width: 100%;
     box-sizing: border-box;
@@ -68,11 +68,11 @@ input[type="date"] {
 textarea {
     min-height: 160px;
     resize: vertical;
-    background-color: #fffaf0;
+    background-color: #FBFBFB;
     font-size: 1.1rem;
     font-family: 'Noto Sans KR', sans-serif;
     color: #333;
-    border: 2px solid #6ea951;
+    border: 2px solid #9997FF;
     border-radius: 5px;
     padding: 10px;
     width: 100%;
@@ -92,7 +92,7 @@ input[type="text"] {
 textarea.form-control {
     resize: vertical;
     font-size: 1.1rem;
-    background-color: #fffaf0;
+    background-color: #FBFBFB;
 }
 
 textarea.form-control::placeholder {
@@ -105,7 +105,7 @@ input::placeholder {
 
 
 .alert-info {
-    background-color: #6ea951 !important;
+    background-color: #9997FF !important;
     color: #fffcbe;
     font-weight: 500;
     padding: 10px;
@@ -145,17 +145,17 @@ input::placeholder {
 
 /* 저장 버튼 (오늘해쓰기와 동일한 색) */
 .btn-today {
-    background-color: #6ea951;
+    background-color: #9997FF;
     color: white;
 }
 
 .btn-today:hover {
-    background-color: #406b24;
+    background-color: #6f42c1;
 }
 
 /* 목록으로 버튼 (모아해 버튼과 동일한 색) */
 .btn-gather {
-    background-color: #EBDB94;
+    background-color: #F2F2F2;
     color: #333;
 }
 
@@ -165,7 +165,7 @@ input::placeholder {
 
 
 .btn-success {
-    background-color: #6ea951;
+    background-color: #9997FF;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -174,7 +174,7 @@ input::placeholder {
 }
 
 .btn-secondary {
-    background-color: #EBDB94;
+    background-color: #F2F2F2;
     color: #333;
     border: none;
     padding: 10px 20px;
@@ -248,14 +248,14 @@ input::placeholder {
     padding: 0.8rem 1.2rem;
     border-radius: 10px;
     cursor: pointer;
-    background-color: #fffaf0; /* 녹색 */
+    background-color: #FBFBFB; /* 녹색 */
     color: white;
     border: none;
     transition: background-color 0.3s ease;
 }
 
 .emoji-button:hover {
-    background-color: #6ea951; /* hover 효과 */
+    background-color: #9997FF; /* hover 효과 */
 }
 
 .btn-gather small {
@@ -268,22 +268,22 @@ input::placeholder {
 
 /* 저장 버튼 */
 .btn-today {
-    background-color: #6ea951;
+    background-color: #9997FF;
     color: white;
 }
 
 .btn-today:hover {
-    background-color: #406b24;
+    background-color: #6f42c1;
 }
 
 /* 목록으로 버튼 */
 .btn-gather {
-    background-color: #EBDB94;
+    background-color: #F2F2F2;
     color: #333;
 }
 
 .btn-gather:hover {
-    background-color: #ddcd84;
+    background-color: #7786F2;
 }
 
 #emojiModal {
@@ -321,11 +321,11 @@ input::placeholder {
 }
 
 .emoji-button:hover {
-    background-color: #6ea951;
+    background-color: #9997FF;
 }
 
 .alert-info {
-    background-color: #6ea951 !important;
+    background-color: #9997FF !important;
     color: #fffcbe;
     font-weight: 500;
     padding: 10px;
@@ -338,14 +338,14 @@ input::placeholder {
 input:focus,
 textarea:focus {
     outline: none;
-    border-color: #406b24;
+    border-color: #6f42c1;
     box-shadow: none;
 }
 
 .emoji-button:focus {
     outline: none;
     box-shadow: none;
-    border-color: #406b24;
+    border-color: #6f42c1;
 }
 
 

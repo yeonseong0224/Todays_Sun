@@ -29,8 +29,8 @@ body {
 
 /* ✅ 연도 박스 */
 .year-box {
-    background-color: #6ea951;
-    border: 2px solid #6BAF97;
+    background-color: #9997FF;
+    border: 2px solid #7786F2;
     border-radius: 12px;
     padding: 16px;
     margin-bottom: 24px;
@@ -39,7 +39,7 @@ body {
 .year-label {
     font-weight: 800;
     font-size: 1.5rem;
-    color: #fffaf0;
+    color: #FBFBFB;
     margin-bottom: 12px;
 }
 
@@ -52,7 +52,7 @@ body {
 .month-button {
     padding: 10px;
     border-radius: 8px;
-    background-color: #fffaf0;
+    background-color: #FBFBFB;
     text-align: center;
     font-weight: 500;
     color: #444;
@@ -60,7 +60,7 @@ body {
 }
 
 .month-button:hover {
-    background-color: #fffaf0;
+    background-color: #FBFBFB;
     text-decoration: none;
     color: #222;
 }
@@ -86,19 +86,19 @@ body {
 }
 
 .btn-today {
-    background-color: #6ea951;
+    background-color: #9997FF;
     color: white;
 }
 
 .btn-today:hover {
-    background-color: #406b24;
+    background-color: #7786F2;
 }
 
 .btn-back {
-    background-color: #EBDB94;
+    background-color: #F2F2F2;
     color: #333;
 }
 
 .btn-back:hover {
-    background-color: #ddcd84;
+    background-color: #e5e6e7;
 }

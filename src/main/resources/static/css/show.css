@@ -13,14 +13,14 @@ body {
 }
 
 .diary-wrapper {
-    background-color: #6ea951;
+    background-color: #9997FF;
     padding: 20px;
     border-radius: 25px;
     margin-top: 2rem;
 }
 
 .diary-header {
-    background-color: #fffaf0;
+    background-color: #FBFBFB;
     padding: 15px 25px;
     border-radius: 15px;
     margin-bottom: 1.5rem;
@@ -34,7 +34,7 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #2F5233;
+    color: #6f42c1;
     margin-left: 10px;
 }
 
@@ -48,7 +48,7 @@ body {
 .diary-content {
     font-size: 1.05rem;
     margin-top: 2rem;
-    background-color: #fffaf0;
+    background-color: #FBFBFB;
     padding: 20px;
     border-radius: 10px;
     white-space: pre-line;
@@ -74,17 +74,17 @@ body {
 }
 
 .btn-delete {
-    background-color: #f8d7da;
-    color: #721c24;
+    background-color: #7786F2;
+    color: #6f42c1;
 }
 
 .btn-back {
-    background-color: #EBDB94;
+    background-color: #F2F2F2;
     color: #333;
 }
 
 .btn-edit:hover {
-    background-color: #3a745c;
+    background-color: #6f42c1;
 }
 
 .btn-delete:hover {
@@ -95,7 +95,7 @@ body {
     background-color: #ddcd84;
 }
 .btn-today {
-    background-color: #6ea951;
+    background-color: #9997FF;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -105,11 +105,11 @@ body {
 }
 
 .btn-today:hover {
-    background-color: #406b24;
+    background-color: #6f42c1;
 }
 
 .btn-gather {
-    background-color: #EBDB94;
+    background-color: #F2F2F2;
     color: #333;
     border: none;
     padding: 10px 20px;
@@ -119,12 +119,12 @@ body {
 }
 
 .btn-gather:hover {
-    background-color: #ddcd84;
+    background-color: #7786F2;
 }
 
 .btn-logout {
-    background-color: #f8d7da;
-    color: #721c24;
+    background-color: #7786F2;
+    color: #6f42c1;
     border: none;
     padding: 10px 20px;
     font-weight: bold;
@@ -133,5 +133,5 @@ body {
 }
 
 .btn-logout:hover {
-    background-color: #f1c0c4;
+    background-color: #9997FF;
 }

@@ -25,7 +25,7 @@
 }
 
 .diary-box {
-    background-color: #6ea951;
+    background-color: #9997FF;
     padding: 30px;
     border-radius: 20px;
     width: 100%;
@@ -34,7 +34,7 @@
 }
 
 .diary-card {
-    background-color: #fffaf0;
+    background-color: #FBFBFB;
     border-radius: 10px;
     padding: 16px 20px;
     display: flex;
@@ -51,7 +51,7 @@
 }
 
 .diary-card a {
-    color: #406b24;
+    color: #6f42c1;
     text-decoration: none;
     font-weight: 500;
 }
@@ -90,7 +90,7 @@
 
 
 .btn-today {
-    background-color: #6ea951;
+    background-color: #9997FF;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -98,11 +98,11 @@
 }
 
 .btn-today:hover {
-    background-color: #406b24;
+    background-color: #7786F2;
 }
 
 .btn-gather {
-    background-color: #EBDB94;
+    background-color: #F2F2F2;
     color: #333;
     border: none;
     padding: 10px 20px;
@@ -114,12 +114,12 @@
 }
 
 .btn-logout {
-    background-color: #f8d7da;
-    color: #721c24;
+    background-color: #7786F2;
+    color: #6f42c1;
     border: none;
     padding: 10px 20px;
 }
 
 .btn-logout:hover {
-    background-color: #f1c0c4;
+    background-color: #9997FF;
 }

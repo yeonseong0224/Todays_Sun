@@ -20,7 +20,7 @@ body, html {
 
 .left-panel {
     width: 50%;
-    background: #6ea951;
+    background: #9997FF;
     color: white;
     padding: 40px;
     position: relative;
@@ -33,7 +33,7 @@ body, html {
     font-size: 2.5rem;
     font-size: 50px;
     margin-bottom: 10px;
-    color: #fffcbe !important;
+    color: #9997FF !important;
     font-family: 'Jua', sans-serif !important;
 }
 
@@ -79,7 +79,7 @@ body, html {
     text-align: center;
     font-family: 'Jua', sans-serif !important;
     font-size: 28px;
-    color: #406b24;
+    color: #6f42c1;
     position: relative;
     margin-bottom: 24px;
 }
@@ -88,7 +88,7 @@ body, html {
     content: '';
     width: 60px;
     height: 3px;
-    background: #6ea951;
+    background: #9997FF;
     display: block;
     margin: 10px auto 0;
 }
@@ -108,13 +108,13 @@ body, html {
 }
 
 .form-field input:focus {
-    border-bottom: 1px solid #6ea951; /* 포커스 시 밑줄 색상 변경 */
+    border-bottom: 1px solid #9997FF; /* 포커스 시 밑줄 색상 변경 */
 }
 
 .btn-sign {
     width: 100%;
     padding: 12px;
-    background: #6ea951;
+    background: #9997FF;
     color: white;
     border: none;
     border-radius: 30px;
@@ -126,7 +126,7 @@ body, html {
 }
 
     .btn-sign:hover {
-    background: #406b24;
+    background: #6f42c1;
 }
 
 .form-box p {
@@ -135,7 +135,7 @@ body, html {
 }
 
 .form-box p a {
-    color: #406b24;
+    color: #6f42c1;
     font-weight: bold;
     text-decoration: none;
 }

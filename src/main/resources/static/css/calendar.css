@@ -20,7 +20,7 @@ body {
 .calendar-container {
     max-width: 800px;
     margin: 0 auto;
-    background-color: #6ea951;
+    background-color: #9997FF;
     border-radius: 20px;
     padding: 30px 20px;
 }
@@ -33,14 +33,14 @@ body {
 }
 
 .weekday-row div {
-    color: #fffaf0;
+    color: #FBFBFB;
     font-weight: bold;
     background-color: transparent;
 }
 
 .calendar-cell {
     padding: 14px 0;
-    background-color: #fffaf0;
+    background-color: #FBFBFB;
     border: 1px solid #ddd;
     border-radius: 10px;
     min-height: 60px;
@@ -66,7 +66,7 @@ body {
 }
 
 .btn-success {
-    background-color: #488E72;
+    background-color: #7786F2;
     border: none;
     color: white;
     padding: 10px 24px;
@@ -81,7 +81,7 @@ body {
 }
 
 .btn-today {
-    background-color: #6ea951;
+    background-color: #9997FF;
     color: white;
 }
 
@@ -109,12 +109,12 @@ body {
 
 /* ✅ 홈 버튼 디자인 동일 적용 */
 .btn-today {
-    background-color: #6ea951;
+    background-color: #9997FF;
     color: white;
 }
 
 .btn-today:hover {
-    background-color: #406b24;
+    background-color: #7786F2;
 }
 
 .button-group {
@@ -125,11 +125,11 @@ body {
 }
 
 .btn-today {
-    background-color: #6ea951;
+    background-color: #9997FF;
     color: white;
 }
 
 .btn-back {
-    background-color: #EBDB94;
+    background-color: #F2F2F2;
     color: #333;
 }

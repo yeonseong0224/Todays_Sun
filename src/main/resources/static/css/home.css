@@ -11,10 +11,13 @@
     font-family: "Open Sans", sans-serif;
     font-size: 12px;
 }
+
 body {
     height: 100vh;
     display: flex;
+    /* overflow: hidden; 제거: 세로 내용이 많아지면 스크롤 되도록 */
 }
+
 .main {
     width: 100%;
     height: 100%;
@@ -24,53 +27,58 @@ body {
     transition: all 0.1s ease-in 0.1s;
 }
 
+/* 메인 컨테이너 - 수직 정렬 */
 .home {
     width: 100%;
     height: 100%;
     color: #555;
-    background: #D4D4F7; /* 수정됨: 연보라색 (두 번째 사진 색상) */
+    background: #D5D5E8;
+    
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column; /* 위에서 아래로 배치 */
+    justify-content: space-evenly; /* 요소들 사이 간격을 균등하게 배분 */
+    align-items: center; /* 가로 중앙 정렬 */
+    
     opacity: 1;
     transition: all 0.4s ease-in 0.2s;
-    padding: 60px 0;
+    padding: 40px 0;
     position: relative;
 }
 
 /* 상단 타이틀 영역 */
 .home-header {
     text-align: center;
-    margin-top: 20px;
     z-index: 2;
-}
-
-.title-text {
-    color: #ffffff !important; /* 흰색 유지 또는 진한 보라색으로 변경 가능 */
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.1); /* 밝은 배경이라 가독성 위해 그림자 살짝 */
-    display: block;
-    font-size: 3.5em;
-    font-family: 'Jua', sans-serif;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .home h1 {
     color: #ffffff;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: normal;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+}
+
+.title-text {
+    color: #ffffff !important;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    display: block;
+    font-size: 4.5em;
+    font-family: 'Jua', sans-serif;
+    margin-top: 0;
 }
 
 /* 중앙 동영상 영역 */
 .video-wrapper {
-    flex-grow: 1;
+    flex-grow: 1; /* 남은 공간을 차지하되 */
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-height: 50vh;
+    max-height: 50vh; /* 너무 커지지 않게 제한 */
+    margin: 20px 0;
 }
 
 .video-wrapper video {
@@ -78,6 +86,7 @@ body {
     max-height: 100%;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    object-fit: cover;
 }
 
 /* 하단 버튼 영역 */
@@ -95,12 +104,10 @@ body {
     padding: 12px 0;
     text-align: center;
     text-decoration: none;
-
-    background: white; /* 밝은 배경이므로 버튼을 흰색으로 채움 */
+    background: white;
     border: 2px solid white;
     border-radius: 150px;
-
-    color: #9997FF; /* 글자는 보라색 */
+    color: #9997FF;
     font-size: 1.1rem;
     font-weight: bold;
     cursor: pointer;
@@ -127,7 +134,7 @@ body {
         margin-top: 40px;
     }
     .title-text {
-        font-size: 2.5em;
+        font-size: 3em;
     }
     .video-wrapper video {
         width: 90%;

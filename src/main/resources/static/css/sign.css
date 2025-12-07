@@ -16,7 +16,7 @@ body, html {
     display: flex;
     height: 100vh;
     overflow: hidden;
-    background-color: #ffffff; 
+    background-color: #ffffff;
 }
 
 /* 왼쪽 패널: 흰색 배경 */

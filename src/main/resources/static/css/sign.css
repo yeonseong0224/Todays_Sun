@@ -16,40 +16,67 @@ body, html {
     display: flex;
     height: 100vh;
     overflow: hidden;
+    background-color: #ffffff; /* 전체 흰색 배경 */
 }
 
 .left-panel {
     width: 50%;
-    background: #9997FF;
-    color: white;
+    background: #ffffff; /* 흰색으로 변경 */
+    color: #9997FF; /* 글자색 보라색으로 변경 */
     padding: 40px;
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
+}
+
+/* 동영상 스타일 */
+.video-container {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* 그림자 연하게 */
+}
+
+.video-container video {
+    width: 100%;
+    display: block;
+}
+
+.intro-box {
+    margin-bottom: 60px;
+    text-align: left;
+    z-index: 1;
 }
 
 .intro h2 {
-    font-size: 2.5rem;
     font-size: 50px;
     margin-bottom: 10px;
-    color: #9997FF !important;
+    color: #9997FF !important; /* 보라색으로 변경 */
     font-family: 'Jua', sans-serif !important;
 }
 
 .intro p {
-    font-size: 1rem;
-    font-family: 'Open Sans', sans-serif; !important;
     font-size: 18px;
+    font-family: 'Open Sans', sans-serif; !important;
+    color: #555; /* 너무 연하지 않게 진한 회색 */
 }
 
 .btn-back {
-    color: white;
+    color: #9997FF; /* 보라색으로 변경 */
     text-decoration: none;
     font-weight: bold;
     display: flex;
     align-items: center;
     font-size: 1rem;
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
 }
 
 .btn-back i {
@@ -72,14 +99,15 @@ body, html {
     background: white;
     padding: 40px;
     border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    /* box-shadow 제거 또는 아주 연하게 (배경이 흰색이라 그림자 필요할 수 있음) */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .form-box h2 {
     text-align: center;
     font-family: 'Jua', sans-serif !important;
     font-size: 28px;
-    color: #6f42c1;
+    color: #9997FF;
     position: relative;
     margin-bottom: 24px;
 }
@@ -108,7 +136,7 @@ body, html {
 }
 
 .form-field input:focus {
-    border-bottom: 1px solid #9997FF; /* 포커스 시 밑줄 색상 변경 */
+    border-bottom: 1px solid #9997FF;
 }
 
 .btn-sign {
@@ -135,7 +163,7 @@ body, html {
 }
 
 .form-box p a {
-    color: #6f42c1;
+    color: #9997FF;
     font-weight: bold;
     text-decoration: none;
 }
@@ -144,12 +172,4 @@ body, html {
     color: #f93f4c;
     font-size: 0.85rem;
     margin-top: 5px;
-}
-
-.intro-box {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    text-align: left;
 }

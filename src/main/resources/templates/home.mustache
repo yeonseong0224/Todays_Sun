@@ -15,15 +15,26 @@
 <body class="h-100">
 <div class="main">
     <section class="home">
-        <h1>
-            <br>
-            Welcome to the<br/>
+        
+        <!-- 상단 타이틀 -->
+        <div class="home-header">
+            <h1>Welcome to the</h1>
             <span class="title-text">오늘해</span>
-        </h1>
+        </div>
 
-        <a href="{{contextPath}}{{addMemberUrl}}" class="btn">Sign Up</a>
-        <a href="{{contextPath}}{{loginUrl}}" class="btn">Sign In</a>
+        <!-- 중앙 동영상 -->
+        <div class="video-wrapper">
+            <video autoplay loop muted playsinline>
+                <source src="/video/main.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
 
+        <!-- 하단 버튼 (가로 정렬) -->
+        <div class="home-footer">
+            <a href="{{contextPath}}{{addMemberUrl}}" class="btn">Sign Up</a>
+            <a href="{{contextPath}}{{loginUrl}}" class="btn">Sign In</a>
+        </div>
 
     </section>
 </div>
